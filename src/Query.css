@@ -1,0 +1,19 @@
+.Query {
+    align-items: center;
+    background: #e8e8e8;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto repeat(3, minmax(0, 1fr));
+    height: 70px;
+    left: 0;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 11;
+}
+
+.Query input {
+    width: 100%;
+    font-size: 24px;
+    padding: 5px;
+}

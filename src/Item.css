@@ -1,0 +1,30 @@
+.Item-image {
+    position: relative;
+    background: 0 0;
+    border: 0;
+    cursor: pointer;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.Item-image-in {
+    aspect-ratio: 300 / 475;
+    display: block;
+    height: auto;
+    object-fit: cover;
+    vertical-align: top;
+    width: 100%;
+}
+
+.Item-title {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0 0 10px;
+}
+
+.Item-line {
+    padding: 0 0 10px;
+}
+
+
