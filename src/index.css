@@ -17,7 +17,7 @@ textarea {
     font-family: 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
 }
 
-.m-inited {
+.App {
     visibility: hidden;
     max-width: 1200px;
     margin: 0 auto;
