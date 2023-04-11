@@ -7,9 +7,9 @@ class Item extends React.Component {
 
         return (
             <div>
-                <a
+                <span
                     className="Item-image"
-                    href={movie.poster}
+                    // href={movie.poster}
                     data-pswp-width="300"
                     data-pswp-height="444"
                 >
@@ -31,21 +31,21 @@ class Item extends React.Component {
                         data-box={movie.box}
                         data-imdb-id={movie.imdbID}
                     />
-                </a>
-                <div className="pswp-caption-content">
+                </span>
+                <div className="Item-card">
                     <h3 className="Item-title">
                         <a href={'https://www.imdb.com/title/'+movie.imdbID+'/reference/'}>
                             {movie.title} - IMDB: ({movie.imdbRating})
                         </a>
                     </h3>
 
-                    <div className="Item-line"><span>Runtime: </span><span>{movie.runtime}</span></div>
-                    <div className="Item--line"><span>Genre: </span><span>{movie.genre}</span></div>
-                    <div className="Item--line"><span>Actors: </span><span>{movie.actors}</span></div>
-                    <div className="Item--line"><span>Director: </span><span>{movie.director}</span></div>
-                    <div className="Item--line"><span>Plot: </span><span>{movie.plot}</span></div>
-                    <div className="Item--line"><span>Year: </span><span>{movie.year}</span></div>
-                    <div className="Item--line"><span>Box: </span><span>{movie.box}</span></div>
+                    <div className="Item-line"><span className="Item-label">Runtime: </span><span>{movie.runtime}</span></div>
+                    <div className="Item-line"><span className="Item-label">Genre: </span><span>{movie.genre}</span></div>
+                    <div className="Item-line"><span className="Item-label">Actors: </span><span>{movie.actors}</span></div>
+                    <div className="Item-line"><span className="Item-label">Director: </span><span>{movie.director}</span></div>
+                    <div className="Item-line"><span className="Item-label">Plot: </span><span>{movie.plot}</span></div>
+                    <div className="Item-line"><span className="Item-label">Year: </span><span>{movie.year}</span></div>
+                    <div className="Item-line"><span className="Item-label">Box: </span><span>{movie.box}</span></div>
                 </div>
             </div>
         );

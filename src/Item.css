@@ -2,7 +2,6 @@
     position: relative;
     background: 0 0;
     border: 0;
-    cursor: pointer;
     display: block;
     margin: 0;
     padding: 0;
@@ -18,13 +17,28 @@
 }
 
 .Item-title {
-    font-size: 20px;
-    font-weight: 600;
-    padding: 0 0 10px;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 0 0 5px;
+    margin: 0;
 }
 
 .Item-line {
-    padding: 0 0 10px;
+    padding: 0 0 5px;
 }
+
+.Item-line:nth-child(odd) {
+    background: #ebebeb;
+}
+
+.Item-label {
+    font-weight: 700;
+}
+
+.Item-card {
+    font-size: 12px;
+    padding: 5px 0 0;
+}
+
 
 

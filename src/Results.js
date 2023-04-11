@@ -4,13 +4,12 @@ import './Results.css';
 import Item from './Item';
 
 class Results extends React.Component {
-    constructor(props) {
-        super(props);
-        this.lb = null;
-    }
-
     render() {
         const { movies } = this.props;
+
+        setTimeout(function() {
+            window.scrollTo(0, 0);
+        }, 10);
 
         return (
             <div className="Results">
