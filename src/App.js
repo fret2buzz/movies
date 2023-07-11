@@ -9,14 +9,23 @@ class App extends React.Component {
         this.state = {
             movies: data[0].movies,
             isLoaded: false,
-            converted: []
+            converted: [],
+            list: localStorage.getItem("moviesView")
         }
         this.updateData = this.updateData.bind(this);
+        this.updateView = this.updateView.bind(this);
     }
 
     updateData(newData) {
         this.setState({
             converted: newData
+        });
+    }
+
+    updateView(view) {
+        localStorage.setItem("moviesView", view);
+        this.setState({
+            list: view
         });
     }
 
@@ -29,9 +38,17 @@ class App extends React.Component {
     render() {
         return (
             <div
-                className={"App " + (this.state.isLoaded ? "m-loaded" : "")}
+                className={
+                    "App " + (this.state.isLoaded ? "m-loaded" : "") +
+                    (this.state.list ? " m-list" : "")
+                }
             >
-                <Query movies={this.state.movies} updateData={this.updateData} />
+                <Query
+                    movies={this.state.movies}
+                    moviesView={this.state.list}
+                    updateData={this.updateData}
+                    updateView={this.updateView}
+                />
                 <Results movies={this.state.converted} />
             </div>
         );

@@ -3,13 +3,19 @@
     background: #e8e8e8;
     display: grid;
     gap: 10px;
-    grid-template-columns: auto repeat(3, minmax(0, 1fr));
+    grid-template-columns: auto repeat(3, minmax(0, 1fr)) auto;
     height: 70px;
     left: 0;
     padding: 0 20px;
     position: sticky;
     top: 0;
     z-index: 11;
+}
+
+.Query-checkbox {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 10px;
 }
 
 .Query input {

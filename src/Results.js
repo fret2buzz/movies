@@ -16,7 +16,8 @@ class Results extends React.Component {
                 {
                     movies.map( (item, index) => {
                         return (
-                            <div>
+                            <div key={ index }>
+
                                 <h2 className="Results-header">
                                     <span className="Results-header-in">
                                         { item.yearWatched } : { item.movies.length }
@@ -24,8 +25,8 @@ class Results extends React.Component {
                                 </h2>
                                 <div className="Results-images">
                                     {
-                                        item.movies.map( (item) => {
-                                            return <Item movie={item}  />
+                                        item.movies.map( (item, idx) => {
+                                            return <Item movie={item} key={ idx } />
                                         })
                                     }
                                 </div>

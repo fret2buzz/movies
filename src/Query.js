@@ -25,6 +25,11 @@ class Query extends React.Component {
         }, 600);
     }
 
+    changeView(event) {
+        const { updateView } = this.props;
+        updateView(event.target.checked);
+    }
+
     componentDidMount() {
         this.getData(this.state);
     }
@@ -84,6 +89,15 @@ class Query extends React.Component {
                         placeholder="actors"
                         type="text"
                         onChange={e => this.filterData(e, "actors")}
+                    />
+                </div>
+                <div className="Query-checkbox">
+                    <label htmlFor="view">List</label>
+                    <input
+                        id="view"
+                        type="checkbox"
+                        checked={this.props.moviesView}
+                        onChange={e => this.changeView(e)}
                     />
                 </div>
             </div>
